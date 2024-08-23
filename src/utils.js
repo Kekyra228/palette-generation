@@ -11,5 +11,13 @@ export function getRandomColors(color, factor) {
 
 // извлекает массив цветов из выбранной темы
 export function generateThemedPalette(baseColors, factor) {
-  return baseColors.map((color) => getRandomColors(color, factor)); //проходит по каждому цвету и преобразует его с нужным фактором и получаем новый массив цветов
+  const fixPaletteLength = 5;
+  const palette = [];
+  // return baseColors.map((color) => getRandomColors(color, factor)); //проходит по каждому цвету и преобразует его с нужным фактором и получаем новый массив цветов
+  for (let i = 0; i < fixPaletteLength; i++) {
+    const randomIndex = Math.floor(Math.random() * baseColors.length);
+    const color = getRandomColors(baseColors[randomIndex], factor);
+    palette.push(color);
+  }
+  return palette;
 }

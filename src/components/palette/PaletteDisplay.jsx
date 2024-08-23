@@ -2,7 +2,6 @@ import { PaletteBlock, PaletteContain } from "./PaletteDisplay.styled";
 import PropTypes from "prop-types";
 
 const PaletteDisplay = ({ newPalette }) => {
-  console.log(newPalette);
   return (
     <PaletteBlock>
       <PaletteContain>

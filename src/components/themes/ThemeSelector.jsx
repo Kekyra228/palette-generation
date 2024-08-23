@@ -15,12 +15,19 @@ const ThemeSelector = () => {
   const [theme, setTheme] = useState("");
 
   // функция генерации палитры по выбранной теме
-  const handleChooseTheme = (selectedTheme) => {
-    setTheme(selectedTheme);
-    const basePalette = palettes[selectedTheme];
-    const newGeneratePalette = generateThemedPalette(basePalette, factor);
-    setNewPalette(newGeneratePalette);
-    console.log(newGeneratePalette);
+  // const handleChooseTheme = (selectedTheme) => {
+  //   setTheme(selectedTheme);
+  //   const basePalette = palettes[selectedTheme];
+  //   const newGeneratePalette = generateThemedPalette(basePalette, factor);
+  //   setNewPalette(newGeneratePalette);
+  //   console.log(newGeneratePalette);
+  // };
+  const generate = () => {
+    if (theme) {
+      const basePalette = palettes[theme];
+      const newGeneratePalette = generateThemedPalette(basePalette, factor);
+      setNewPalette(newGeneratePalette);
+    }
   };
   return (
     <ThemeSelectorContain>
@@ -31,8 +38,8 @@ const ThemeSelector = () => {
         value={factor}
         onChange={(e) => setFactor(parseInt(e.target.value))}
       />
-      <p>Выбранная вариантивность цвета: {factor}</p>
-      <select onChange={(e) => handleChooseTheme(e.target.value)}>
+      <p>Насыщенность: {factor}</p>
+      <select onChange={(e) => setTheme(e.target.value)}>
         <option value="nature">Nature</option>
         <option value="sky">Sky</option>
         <option value="city">City</option>
@@ -72,6 +79,7 @@ const ThemeSelector = () => {
           </Button>
         </Column>
       </ThemeBlock> */}
+      <button onClick={generate}>Сгенерировать</button>
       <PaletteDisplay newPalette={newPalette} />
     </ThemeSelectorContain>
   );
