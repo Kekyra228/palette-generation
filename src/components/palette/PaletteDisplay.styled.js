@@ -16,3 +16,10 @@ export const PaletteContain = styled.div`
   justify-content: center;
   border-radius: 50px;
 `;
+
+export const PaletteBox = styled.div`
+  width: 150px;
+  height: 150px;
+  background-color: ${(props) => props.color || "gray"};
+  border: 1px solid #4a5759;
+`;

@@ -10,6 +10,16 @@ export const palettes = {
     "#A0CCF2",
   ],
   city: ["#708090", "#2F4F4F", "#A9A9A9"],
-  food: ["#FF6347", "#FFD700", "#ADFF2F"],
+  food: [
+    "#85A60F",
+    "#F28D35",
+    "#73130A",
+    "#9C844C",
+    "#DB2901",
+    "#DBDB00",
+    "#9C5927",
+    "#FFD1A2",
+    "#F5C201",
+  ],
   minerals: ["#8A2BE2", "#5F9EA0", "#D2691E"],
 };
