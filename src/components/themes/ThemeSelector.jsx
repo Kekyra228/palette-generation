@@ -2,6 +2,8 @@ import { useState } from "react";
 import PaletteDisplay from "../palette/PaletteDisplay";
 import {
   BlockRange,
+  Button,
+  ButtonContain,
   SelectionBlock,
   SelectionBlockCommon,
   ThemeImage,
@@ -12,12 +14,16 @@ import { generateThemedPalette } from "../../utils";
 import nature from "../../assets/nature.jpg";
 import nebo from "../../assets/nebo.jpg";
 import food from "../../assets/food.jpg";
+import city from "../../assets/city.jpg";
+import minerals from "../../assets/minerals.jpg";
 
 const ThemeSelector = () => {
   const themeImages = {
     nature: nature,
     sky: nebo,
     food: food,
+    city: city,
+    minerals: minerals,
   };
   const [factor, setFactor] = useState(20);
   const [newPalette, setNewPalette] = useState([]);
@@ -51,7 +57,8 @@ const ThemeSelector = () => {
               <option value="minerals">Минералы и самоцветы</option>
             </select>
           </BlockRange>
-          <button onClick={generate}>Сгенерировать</button>
+
+          <Button onClick={generate}>Сгенерировать</Button>
         </SelectionBlock>
         {theme && <ThemeImage src={themeImages[theme]} alt={theme} />}
         <PaletteDisplay newPalette={newPalette} />

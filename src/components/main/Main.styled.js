@@ -18,4 +18,15 @@ export const MainCont = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  row-gap: 20px;
+`;
+
+export const ImgContain = styled.div`
+  width: 400px; /* Задайте нужный размер */
+  height: 400px; /* Задайте нужный размер */
+  background-image: url("../../assets/palette.jpg"); /* Путь к вашему изображению */
+  background-size: contain; /* Масштабирует изображение, чтобы оно полностью помещалось в блоке */
+  background-repeat: no-repeat; /* Изображение не повторяется */
+  z-index: 10;
+  background-color: transparent;
 `;

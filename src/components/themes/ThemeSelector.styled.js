@@ -31,18 +31,28 @@ export const ThemeSelectorContain = styled.div`
 //   box-sizing: border-box;
 // `;
 
-// export const Button = styled.button`
-//   width: 200px;
-//   height: 40px;
-//   background-color: #b0c4b1;
-//   border: none;
-//   outline: none;
-//   font-size: 16px;
-//   border-radius: 30px;
-//   & p {
-//     color: #4a5759;
-//   }
-// `;
+export const ButtonContain = styled.button`
+  &:hover .copy-button {
+    display: block;
+  }
+`;
+
+export const Button = styled.button`
+  width: 200px;
+  height: 40px;
+  background-color: #b0c4b1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  border-radius: 30px;
+  & p {
+    color: #4a5759;
+  }
+  &:hover {
+    background-color: #65a769;
+    color: #fff;
+  }
+`;
 
 export const ThemeBlock = styled.div`
   width: 300px;
