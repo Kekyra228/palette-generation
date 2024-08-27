@@ -7,7 +7,7 @@ export const MainBlock = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 80px;
+  padding: 50px;
   box-sizing: border-box;
   /* background-image: url(${banner});
   background-repeat: no-repeat; */
@@ -15,18 +15,19 @@ export const MainBlock = styled.div`
 
 export const MainCont = styled.div`
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
 `;
 
-export const ImgContain = styled.div`
-  width: 400px; /* Задайте нужный размер */
-  height: 400px; /* Задайте нужный размер */
-  background-image: url("../../assets/palette.jpg"); /* Путь к вашему изображению */
-  background-size: contain; /* Масштабирует изображение, чтобы оно полностью помещалось в блоке */
-  background-repeat: no-repeat; /* Изображение не повторяется */
-  z-index: 10;
-  background-color: transparent;
+export const Title = styled.h1`
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 2px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 `;

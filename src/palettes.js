@@ -48,5 +48,6 @@ export const palettes = {
     "#4A223D",
     "#2F4129",
     "#3DA089",
+    "#BF6989",
   ],
 };

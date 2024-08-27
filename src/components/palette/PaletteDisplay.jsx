@@ -1,5 +1,4 @@
 import {
-  ColorIndex,
   PaletteBlock,
   PaletteBox,
   PaletteContain,
@@ -10,7 +9,7 @@ import PropTypes from "prop-types";
 const PaletteDisplay = ({ newPalette }) => {
   const copyToClipboard = (color) => {
     navigator.clipboard.writeText(color);
-    alert(`HEX-код ${color} скопирован!`);
+    alert(`Цвет ${color} скопирован!`);
   };
 
   return (
@@ -19,7 +18,6 @@ const PaletteDisplay = ({ newPalette }) => {
         {newPalette.length > 0 ? (
           newPalette.map((color, index) => (
             <PaletteBox key={index} color={color}>
-              <ColorIndex>{index + 1}</ColorIndex>
               <ButtonCopy onClick={() => copyToClipboard(color)}>
                 Скопировать цвет
               </ButtonCopy>

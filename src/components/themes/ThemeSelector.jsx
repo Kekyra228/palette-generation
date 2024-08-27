@@ -3,8 +3,11 @@ import PaletteDisplay from "../palette/PaletteDisplay";
 import {
   BlockRange,
   Button,
+  DropdownThemes,
+  Option,
   SelectionBlock,
   SelectionBlockCommon,
+  SliderFactor,
   ThemeImage,
   ThemeSelectorContain,
 } from "./ThemeSelector.styled";
@@ -40,28 +43,29 @@ const ThemeSelector = () => {
       <SelectionBlockCommon>
         <SelectionBlock>
           <BlockRange>
-            <input
+            <p>Насыщенность: {factor}</p>
+            <SliderFactor
               type="range"
               min="-50"
               max="50"
               value={factor}
               onChange={(e) => setFactor(parseInt(e.target.value))}
             />
-            <p>Насыщенность: {factor}</p>
-            <select onChange={(e) => setTheme(e.target.value)}>
-              <option value="nature">Природа</option>
-              <option value="sky">Небо</option>
-              <option value="city">Городская среда</option>
-              <option value="food">Еда</option>
-              <option value="minerals">Минералы и самоцветы</option>
-            </select>
+            <p>Тема:</p>
+            <DropdownThemes onChange={(e) => setTheme(e.target.value)}>
+              <Option value="nature">Природа</Option>
+              <Option value="sky">Небо</Option>
+              <Option value="city">Городская среда</Option>
+              <Option value="food">Еда</Option>
+              <Option value="minerals">Минералы и самоцветы</Option>
+            </DropdownThemes>
           </BlockRange>
 
           <Button onClick={generate}>Сгенерировать</Button>
         </SelectionBlock>
         {theme && <ThemeImage src={themeImages[theme]} alt={theme} />}
-        <PaletteDisplay newPalette={newPalette} />
       </SelectionBlockCommon>
+      <PaletteDisplay newPalette={newPalette} />
     </ThemeSelectorContain>
   );
 };
