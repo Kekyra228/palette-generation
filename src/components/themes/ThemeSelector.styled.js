@@ -31,12 +31,6 @@ export const ThemeSelectorContain = styled.div`
 //   box-sizing: border-box;
 // `;
 
-export const ButtonContain = styled.button`
-  &:hover .copy-button {
-    display: block;
-  }
-`;
-
 export const Button = styled.button`
   width: 200px;
   height: 40px;
@@ -82,6 +76,7 @@ export const ThemeImage = styled.img`
   height: 550px;
   max-width: 600px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 20px;
   display: block;
+  box-shadow: 3px 4px 4px #5f6d4a;
 `;

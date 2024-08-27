@@ -3,7 +3,6 @@ import PaletteDisplay from "../palette/PaletteDisplay";
 import {
   BlockRange,
   Button,
-  ButtonContain,
   SelectionBlock,
   SelectionBlockCommon,
   ThemeImage,
