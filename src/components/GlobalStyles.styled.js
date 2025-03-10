@@ -10,8 +10,8 @@ const GlobalStyles = createGlobalStyle`
   body {
     width: 100%;
     height: 100%;
-    font-family: 'Arial', sans-serif;
-    background-color: #dedbd2; /* Цвет фона */
+    font-family: 'Nunito', sans-serif;
+    background-color: #DEDBD2; /* Цвет фона */
     color: #4a5759; /* Основной цвет текста */
   }
 
